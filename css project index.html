@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSS Web Page</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    line-height:1.5;
+}
+
+/* Navigation Bar */
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:#000;
+}
+
+li{
+    float:left;
+}
+
+li a{
+    display:block;
+    color:white;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+}
+
+li a:hover{
+    background-color:#555;
+}
+
+.active{
+    background-color:#0099ff;
+}
+
+/* Main Layout */
+.main{
+    display:flex;
+}
+
+/* Left Column */
+#leftcolumn{
+    width:230px;
+    background:#24C8FF;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+/* Center Content */
+#contentcolumn{
+    flex:1;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+/* Right Column */
+#rightcolumn{
+    width:230px;
+    background:#FFFB00;
+    padding:15px;
+    box-sizing:border-box;
+}
+
+/* Footer */
+#footer{
+    background:black;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width:800px){
+    .main{
+        flex-direction:column;
+    }
+
+    #leftcolumn,
+    #contentcolumn,
+    #rightcolumn{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">News</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+<div class="main">
+
+    <div id="leftcolumn">
+        <h3>Exercise</h3>
+        <p>
+            Regular exercise is essential for maintaining good health.
+            It helps strengthen muscles, improve cardiovascular fitness,
+            and reduce stress.
+        </p>
+    </div>
+
+    <div id="contentcolumn">
+        <h2>Technology</h2>
+        <p>
+            Technology has become an important part of everyday life.
+            It helps people communicate, learn new skills, and complete
+            tasks more efficiently. From smartphones to computers,
+            technology continues to make information more accessible
+            and connects people across the world.
+        </p>
+    </div>
+
+    <div id="rightcolumn">
+        <h3>Education</h3>
+        <p>
+            Education plays a vital role in personal and social development.
+            It provides knowledge, develops critical thinking skills,
+            and creates opportunities for future success.
+        </p>
+    </div>
+
+</div>
+
+<div id="footer">
+    Footer
+</div>
+
+</body>
+</html>
